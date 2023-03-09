@@ -17,10 +17,25 @@ var numeric = confirm("Would you like to include numbers?");
 var specialCh = confirm("Would you like to include special characters?")
 
 // Check to make sure at least one type of character was selected
+
 if(!lowercase && !uppercase && !numeric && !specialCh){
     alert("At least one type of character must be selected.");
     return "";
 }
+// create arrays for all possible options for each criteria
+
+var lowercaseChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var uppercaseChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var numericChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var specialCHChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
+
+var allChars = "";
+var password = "";
+
+
+
+
+
 
 }
 // Write password to the #password input
