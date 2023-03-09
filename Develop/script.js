@@ -24,18 +24,33 @@ if(!lowercase && !uppercase && !numeric && !specialCh){
 }
 // create arrays for all possible options for each criteria
 
-var lowercaseChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var uppercaseChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-var numericChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-var specialCHChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
+var lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
+var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var numericChars = "0123456789"
+var specialCHChars = "!@#$%^&*()_+-=[]{}|;:,.<>/?"
 
 var allChars = "";
 var password = "";
 
 
+if (lowercase){
+    allChars += lowercaseChars;
+}
+if (uppercase){
+    allChars += uppercaseChars;
+}
+if (numeric){
+    allChars += numericChars;
+}
+if (specialCh){
+    allChars += specialCHChars;
+}
 
+for (var i =0; i < passwordLength; i++){
+    password += allChars.charAt(Math.floor(Math.random() * allChars.length))
+}
 
-
+return password;
 
 }
 // Write password to the #password input
